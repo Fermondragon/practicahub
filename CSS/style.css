@@ -31,12 +31,8 @@ body{
     
     border-bottom: solid 10px #03237C;
     border-left: solid 0.5rem #03237C;
-    border-right: solid 25px #03237C;*/
-    
-    
-    
-    
-    border-top: solid .5rem #03237C;
+    border-right: solid 25px #03237C;
+    border-top: solid .5rem #03237C;*/
     font-family: 'Libre Baskerville', serif;
     position: fixed;
     background-color: white;
@@ -54,10 +50,10 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    
     margin-right: 1rem;
     margin-left: 1rem;
-    padding: 1rem;
+    padding: .5rem;
 }
 .barra_navegacion ul{
     list-style-type: none ;
@@ -77,8 +73,7 @@ body{
     color: #4C76EB;
     font-size: x-large;
     font-weight: bold;
-    padding: 1rem ;
-    margin-left: 0.5rem;    
+    padding: 1rem ;  
 }
 .top5 li{
     list-style-type: none;
@@ -121,10 +116,10 @@ main p{
 .sectionclientes{
     justify-items: center;
 }
-.clientes li img{
-    height: 300px; /*ALTO*/
-    width: 600px;  /*ANCHO*/
-    margin: 2.5rem 2rem 3.5rem 2rem;
+.c-i img{
+    height: 350px; 
+    width: 550px;  
+    margin: 1.5rem 1rem 2.5rem 1rem;
 }
 .top5, .modelo li, .clientes li{
     display: inline-block;
@@ -151,8 +146,9 @@ main p{
     padding: 4.5rem;
     /*border-top: solid 15px #03237C;*/
     border-right: solid 1.5rem #03237C;
-    border-bottom: solid 1rem #03237C;
+    border-bottom: solid 1.5rem #03237C;
     border-left: solid 1.5rem #03237C;
+    border-top: solid 1rem #03237C;
     font-family: 'Libre Baskerville', serif;
     width: auto;
     height: auto;
@@ -176,11 +172,14 @@ main p{
     grid-template-areas: 
     "barranav   barranav    barranav"
     "main       main        main"
-    "top5       top5        clientes"
-    "top5       top5        clientes"
+    "top5       top5        top5"
+    "clientes       clientes        clientes"
     "piepagina  piepagina   piepagina"    ;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-template-rows: auto 1fr 2fr 2fr auto;
+    grid-row-gap: 2rem;
+
+
 }
 #encabezado{
     grid-area: encabezado;
@@ -210,15 +209,32 @@ main p{
         "top5       clientes"
         "top5       clientes"
         "piepagina  piepagina"    ;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: auto 1fr 1fr 1fr auto;
     }
 
-    .clientes li img{
+
+    .c-i img{
         height: 250px; 
         width: 450px;  
         margin: 1.5rem 1rem 2.5rem 1rem;
     }
+
+    .sectionclientes{
+        grid-area: clientes;
+        justify-self: stretch;
+        position: absolute;
+        top: 130rem;
+    }
+    #piepagina{
+        grid-area: piepag;
+        position: absolute;
+        top: 280rem;
+    }
+
+
+
+
 }
 
 @media(max-width:576px ){
@@ -233,9 +249,15 @@ main p{
         grid-template-rows: auto 1fr 1fr 1fr auto;
     }
 
-    .clientes li img{
+    .sectionclientes{
+        grid-area: clientes;
+        justify-self: stretch;
+        position: absolute;
+        top: 100rem;
+    }
+    .c-i img{
         height: 150px; 
-        width: 350px;  
-        
+        width: 250px;  
+        margin: 1.5rem 1rem 2.5rem 1rem;
     }
 }
