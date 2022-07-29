@@ -49,6 +49,9 @@ body{
     margin-left: 0.5rem;   
     font-family: 'Libre Baskerville', serif; 
 }
+.navbar a:hover{
+    color: aqua;
+}
 #grillaindex{
     display: grid;
     width:100%;
@@ -88,17 +91,21 @@ body{
     justify-self: center;
     position: absolute;
     top: 200rem;
-    margin-top: 5%;
+    margin: 10%;
+}
+.sectionclientes p{
+    font-size: large;
 }
 .carousel-item img{
-    height: 350px; 
-    width: 550px;  
+    
+    height: 550px; 
+    width: 750px;  
     margin: 1.5rem 1rem 2.5rem 1rem;
 }
 #piepagina{
     grid-area: piepag;
     position: absolute;
-    top: 370rem;
+    top: 260rem;
     background-color: #0D1C45;
     color: #4C76EB;
     margin-right: .5rem;
@@ -118,7 +125,7 @@ body{
         "clientes   clientes    clientes"
         "piepag     piepag      piepag";
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
+        grid-template-rows: repeat(5,1fr);
         grid-row-gap: 2rem;
     }
     /*.c-i img{
